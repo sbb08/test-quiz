@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Page - Step 4</title>
+</head>
+<body>
+    <img src="city-beauty-logo.png" alt="Image" width="105" height="45" class="img-logo">
+    <div class="header">
+        <button class="back-button">
+            <a href="step3.html"><img src="arrow.svg" alt="Back Arrow" width="24" height="24"></a>
+        </button>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar4"></div>
+        </div>
+        <div class="page-indicator">4/4</div>
+    </div>
+    <!-- Page 4 -->
+    <div class="content" id="page4">
+        <div class="question">Have you experience any of theses issues in your previous skincare attempts?</div>
+        <button class="choice with-checkbox" id="ingredient1">
+            <input type="checkbox" class="choice-checkbox" id="checkbox1" value="Overwhelmed, too many products to keep track of">
+            <label for="checkbox1">Overwhelmed, too many products to keep track of</label>
+        </button>
+        <button class="choice with-checkbox" id="ingredient2">
+            <input type="checkbox" class="choice-checkbox" id="checkbox2" value="Overcomplicated, hard to understand ingredients">
+            <label for="checkbox2">Overcomplicated, hard to understand ingredients</label>
+        </button>
+        <button class="choice with-checkbox" id="ingredient4">
+            <input type="checkbox" class="choice-checkbox" id="checkbox4" value="Hopelessness">
+            <label for="checkbox4">Hopelessness</label>
+        </button>
+        <button class="choice with-checkbox" id="ingredient5">
+            <input type="checkbox" class="choice-checkbox" id="checkbox5" value="No Results">
+            <label for="checkbox5">No Results</label>
+        </button>
+        <button class="choice with-checkbox" id="ingredient5">
+            <input type="checkbox" class="choice-checkbox" id="checkbox6" value="Anxiety">
+            <label for="checkbox6">Anxiety</label>
+        </button>
+        <hr style="margin: 30px 0; color: #556579 !important; background-color: #556579 !important;" />
+        <a class="unsure-button" onclick="submitQuiz()"><img src="x.png" alt="Arrow Icon" width="24" height="24" style="margin-right:20px">None of the Above </a>
+        <a class="continue-button" onclick="submitQuiz()" id="continueLink">Continue <img src="arrow-right.svg" alt="Arrow Icon" width="24" height="24"></a>
+        <a class="skip-button" onclick="submitQuiz()">Skip</a>
+
+        
+        <p id="hiddenContent" class="result" style="display:none">Thanks for sharing! <span class="result-description">We've discovered that a lot of people have faced the same setbacks. City Beauty has a clear one-step treatment that is easy to follow with long-term results. In less than two minutes, you will feel better than ever.</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Page - Step 3</title>
+</head>
+<body>
+    <img src="city-beauty-logo.png" alt="Image" width="105" height="45" class="img-logo">
+    <div class="header">
+        <button class="back-button">
+            <a href="step2.html"><img src="arrow.svg" alt="Back Arrow" width="24" height="24"></a>
+        </button>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar3"></div>
+        </div>
+        <div class="page-indicator">3/4</div>
+    </div>
+    <!-- Page 3 -->
+    <div class="content" id="page3">
+        <div class="question">What hydrating ingredients are you interested in?</div>
+        <button class="choice with-checkbox" id="ingredient1">
+            <input type="checkbox" class="choice-checkbox" id="checkbox1" value="Niacinamide">
+            <label for="checkbox1">Niacinamide</label>
+            <span class="description">This is a form of vitamin B that supports protein and collagen to promote optimal skin health</span>
+        </button>
+        <button class="choice with-checkbox" id="ingredient2">
+            <input type="checkbox" class="choice-checkbox" id="checkbox2" value="Lipid Compound">
+            <label for="checkbox2">Lipid Compound</label>
+            <span class="description">This improves moisture retention in the skin's barrier for long-lasting hydration</span>
+        </button>
+        <button class="choice with-checkbox" id="ingredient3">
+            <input type="checkbox" class="choice-checkbox" id="checkbox3" value="Ribose">
+            <label for="checkbox3">Ribose</label>
+            <span class="description">This reduces the appearance of thinning, wrinkled skin</span>
+        </button>
+        <button class="choice with-checkbox" id="ingredient4">
+            <input type="checkbox" class="choice-checkbox" id="checkbox4" value="Jojoba Leaf Extract">
+            <label for="checkbox4">Jojoba Leaf Extract</label>
+            <span class="description">This is rich in antioxidants and helps stimulate the production of collagen</span>
+        </button>
+        <button class="choice with-checkbox" id="ingredient5">
+            <input type="checkbox" class="choice-checkbox" id="checkbox5" value="Glycerin">
+            <label for="checkbox5">Glycerin</label>
+            <span class="description">This helps keep the skin hydrated</span>
+        </button>
+        <hr style="margin: 30px 0; color: #556579 !important; background-color: #556579 !important;" />
+        <a href="step4.html" class="unsure-button"><img src="x.png" alt="Arrow Icon" width="24" height="24" style="margin-right:20px">Unsure what my skin needs </a>
+        <a href="" class="continue-button" id="continueLink">Continue <img src="arrow-right.svg" alt="Arrow Icon" width="24" height="24"></a>
+        <a href="step4.html" class="skip-button" >Skip</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

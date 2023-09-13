@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Page - Step 2</title>
+</head>
+<body>
+    <img src="city-beauty-logo.png" alt="Image" width="105" height="45" class="img-logo">
+    <div class="header">
+        <button class="back-button">
+            <a href="step1.html"><img src="arrow.svg" alt="Back Arrow" width="24" height="24"></a>
+        </button>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar2"></div>
+        </div>
+        <div class="page-indicator">2/4</div>
+    </div>
+    <!-- Page 2 -->
+    <div class="content" id="page2">
+        <div class="question">Select problem areas</div>
+        <button class="choice with-checkbox" id="problem1">
+            <input type="checkbox" class="choice-checkbox" id="checkbox1" value="Loose skin on thighs and legs">
+            <label for="checkbox1">Loose skin on thighs and legs</label>
+        </button>
+        <button class="choice with-checkbox" id="problem2">
+            <input type="checkbox" class="choice-checkbox" id="checkbox2" value="Thinning skin on arms">
+            <label for="checkbox2">Thinning skin on arms</label>
+        </button>
+        <button class="choice with-checkbox" id="problem3">
+            <input type="checkbox" class="choice-checkbox" id="checkbox3" value="Loose neck/jaw">
+            <label for="checkbox3">Loose neck/jaw</label>
+        </button>
+        <button class="choice with-checkbox" id="problem4">
+            <input type="checkbox" class="choice-checkbox" id="checkbox4" value="Saggy belly">
+            <label for="checkbox4">Saggy belly</label>
+        </button>
+        
+        <a href="" class="continue-button" id="continueLink">Continue <img src="arrow-right.svg" alt="Arrow Icon" width="24" height="24"></a>
+        <a href="step3.html" class="skip-button" >Skip</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
