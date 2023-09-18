@@ -1,593 +1,920 @@
+/* General styling for the entire page */
 body {
-    font-family: 'Work Sans', sans-serif; /* Use Work Sans as the font */
-    background-color: #0C233F;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 20px;
-    color: #fff;
-  }
-  
-  .header {
-    display: flex;
-    align-items: center; /* Vertical center alignment for all elements */
-    justify-content: space-between;
-    width: 520px;
-    margin-bottom: 20px;
-  }
-  
-  .back-button {
-    background-color: #556479;
-    border: none;
-    color: #fff;
-    font-size: 9px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .back-button:hover {
-    color: #E2C47C;
-  }
-  
-  .page-indicator {
-    font-size: 16px;
-    color: #fff;
-    margin-left: auto; /* Push the page indicator to the right */
-  }
-  
-  .content {
-    width: 520px;
-  }
-  
-  .question,
-  .choice,
-  .continue-button,
-  .progress-container {
-    width: 520px; /* Set the same width for all elements */
-  }
-  
-  .question {
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    text-align: left;
-  }
-  
-  .choice {
-    background-color: #556479;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold; /* Set the font weight to bold */
-    height: 140px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Align content horizontally */
-    padding: 0 16px; /* Add some padding for spacing */
-    max-width: 100%; /* Ensure the choice doesn't exceed 100% width of its container */
-    background-repeat: no-repeat; /* Prevent image repetition */
-    background-size: auto 100%; /* Set the image size to auto width and full height */
-    background-position: right center; /* Position the image on the right */
-  }
-  .content#page1 .choice{
-    background-image: url("imgs/pg-1-firm-skin.png"); /* Set the image as background */
-  }
-  
-  .continue-button {
-    background-color: #E2C47C;
-    border: none;
-    color: #000;
-    font-weight: bold; /* Set the font weight to bold */
-    font-size: 20px;
-    height: 82px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 480px; /* Make the button take the full width of its container */
-    max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
-    text-decoration: none; /* Remove text decoration */
-  }
-  
-  .skip-button {
-    background-color: none;
-    border: 1px solid white;
-    color: #fff;
-    font-weight: bold; /* Set the font weight to bold */
-    font-size: 20px;
-    height: 82px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 480px; /* Make the button take the full width of its container */
-    max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
-    text-decoration: none; /* Remove text decoration */
-  }
+  font-family: 'Work Sans', sans-serif; /* Use Work Sans as the font */
+  background-color: #0C233F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+}
 
-  .result{
-    border: 1px solid white;
-    color: #fff;
-    font-weight: bold; /* Set the font weight to bold */
-    font-size: 20px;
-    height: 82px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-    margin-top: 45px;
-    width: 480px; /* Make the button take the full width of its container */
-    max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
-    text-decoration: none; /* Remove text decoration */
-  }
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center; /* Vertical center alignment for all elements */
+  justify-content: space-between;
+  width: 520px;
+  margin-bottom: 20px;
+}
 
-  .unsure-button {
-    background-color: #556479;
-    border: 1px solid white;
-    color: #fff;
-    font-weight: bold; /* Set the font weight to bold */
-    font-size: 20px;
-    height: 82px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 480px; /* Make the button take the full width of its container */
-    max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
-    text-decoration: none; /* Remove text decoration */
-  }
-  a.continue-button.disabled {
-    background-color: #8D8463;
-    opacity: 0.6;
-    pointer-events: none; /* Disable pointer events to prevent clicks */
-  }
-  
-  .progress-container {
-    width: 520px; /* Set the same width as other elements */
-    background-color: #556579;
-    height: 12px;
-    margin: 0 16px;
-  }
-  
-  .progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #E2C47C;
-    transition: width 0.3s;
+/* Back button styling */
+.back-button {
+  background-color: #556479;
+  border: none;
+  color: #fff;
+  font-size: 9px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
 
-  }
+.back-button:hover {
+  color: #E2C47C;
+}
 
-  .progress-bar#progressBar1{
-    animation: progressAnimation1 3s ease forwards; /* Define the animation */
-  }
-  /* Keyframes for the progress animation */
+/* Page indicator styling */
+.page-indicator {
+  font-size: 16px;
+  color: #fff;
+  margin-left: auto; /* Push the page indicator to the right */
+}
+
+/* Content container styling */
+.content {
+  width: 520px;
+}
+
+/* Common styling for questions, choices, continue button, and progress container */
+.question,
+.choice,
+.continue-button,
+.progress-container {
+  width: 520px; /* Set the same width for all elements */
+}
+
+/* Question styling */
+.question {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Choice styling */
+.choice {
+  background-color: #556479;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  height: 140px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align content horizontally */
+  padding: 0 16px; /* Add some padding for spacing */
+  max-width: 100%; /* Ensure the choice doesn't exceed 100% width of its container */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-size: auto 100%; /* Set the image size to auto width and full height */
+  background-position: right center; /* Position the image on the right */
+  padding-right: 170px;
+  text-align: left;
+}
+
+/* Background images for choices on Page 1 */
+.content#page1 #choice1 {
+  background-image: url("imgs/intro-crepey-skin.png");
+}
+
+.content#page1 #choice2 {
+  background-image: url("imgs/intro-dry-flaky.png");
+}
+
+.content#page1 #choice3 {
+  background-image: url("imgs/intro-firmer.png");
+}
+
+/* Continue button styling */
+.continue-button {
+  background-color: #E2C47C;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  height: 82px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Make the button take the full width of its container */
+  max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
+  text-decoration: none; /* Remove text decoration */
+}
+
+/* Skip button styling */
+.skip-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  height: 82px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Make the button take the full width of its container */
+  max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
+  text-decoration: none; /* Remove text decoration */
+}
+
+/* Result styling */
+.result {
+  border: 1px solid white;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  height: 82px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 45px;
+  width: 480px; /* Make the button take the full width of its container */
+  max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
+  text-decoration: none; /* Remove text decoration */
+}
+
+/* Unsure button styling */
+.unsure-button {
+  background-color: #556479;
+  border: 1px solid white;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  height: 82px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; /* Make the button take the full width of its container */
+  max-width: 100%; /* Ensure the button doesn't exceed 100% width of its container */
+  text-decoration: none; /* Remove text decoration */
+}
+
+/* Disabled state for continue button */
+button.continue-button.disabled {
+  background-color: #8D8463;
+  opacity: 0.6;
+  pointer-events: none; /* Disable pointer events to prevent clicks */
+}
+
+/* Progress container styling */
+.progress-container {
+  width: 520px; /* Set the same width as other elements */
+  background-color: #556579;
+  height: 12px;
+  margin: 0 16px;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #E2C47C;
+  transition: width 0.3s;
+}
+
+/* Keyframes for progress bar animation on Page 1 */
+.progress-bar#progressBar1 {
+  animation: progressAnimation1 3s ease forwards;
+}
+
 @keyframes progressAnimation1 {
-    0% {
-        width: 0%; /* Start with 0% width */
-    }
-    100% {
-        width: 20%; /* End with 10% width (or the desired width) */
-    }
-}
-.progress-bar#progressBar2{
-    animation: progressAnimation2 3s ease forwards; /* Define the animation */
+  0% {
+    width: 0%;
   }
-  /* Keyframes for the progress animation */
+  100% {
+    width: 20%;
+  }
+}
+
+/* Keyframes for progress bar animation on Page 2 */
+.progress-bar#progressBar2 {
+  animation: progressAnimation2 3s ease forwards;
+}
+
 @keyframes progressAnimation2 {
-    0% {
-        width: 20%; /* Start with 0% width */
-    }
-    100% {
-        width: 40%; /* End with 10% width (or the desired width) */
-    }
-}
-.progress-bar#progressBar3{
-    animation: progressAnimation3 3s ease forwards; /* Define the animation */
+  0% {
+    width: 20%;
   }
-  /* Keyframes for the progress animation */
+  100% {
+    width: 40%;
+  }
+}
+
+/* Keyframes for progress bar animation on Page 3 */
+.progress-bar#progressBar3 {
+  animation: progressAnimation3 3s ease forwards;
+}
+
 @keyframes progressAnimation3 {
-    0% {
-        width: 40%; /* Start with 0% width */
-    }
-    100% {
-        width: 75%; /* End with 10% width (or the desired width) */
-    }
+  0% {
+    width: 40%;
+  }
+  100% {
+    width: 75%;
+  }
 }
 
-.progress-bar#progressBar4{
-    animation: progressAnimation4 3s ease forwards; /* Define the animation */
-  }
-  /* Keyframes for the progress animation */
+/* Keyframes for progress bar animation on Page 4 */
+.progress-bar#progressBar4 {
+  animation: progressAnimation4 3s ease forwards;
+}
+
 @keyframes progressAnimation4 {
-    0% {
-        width: 75%; /* Start with 0% width */
-    }
-    100% {
-        width: 100%; /* End with 10% width (or the desired width) */
-    }
+  0% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
 }
-  
-  .choice.selected {
-    border: 2px solid #E2C47C; /* Add a solid border for selected choice */
-    background-color: #556479; /* Keep the background color for selected choice */
-    color: #E2C47C; /* Change the text color for selected choice */
-    cursor: not-allowed;
-  }
-  
-  .img-logo{
-    margin-bottom: 40px;
-  }
-  
-  /* Custom radio button style */
-  .custom-radio {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .choice-input {
-    display: none; /* Hide the default radio button */
-  }
-  
-  .custom-radio-box {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #556479;
-    margin-right: 10px;
-    border-radius: 3px;
-    background-color: transparent;
-    position: relative;
-  }
-  
-  .custom-radio-box::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: #556479;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s;
-  }
-  
-  .choice-input:checked + .custom-radio-box::before {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  /* Add background style to choices on Page 2 with the same width and height as Page 1 */
-  .content#page2 .choice.with-checkbox {
-    background-color: #556479;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    height: 140px; /* Same height as Page 1 */
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: right center;
-  }
-  .content#page2 .choice.with-checkbox#problem1 {
-    background-image: url("imgs/pg-2-thighs.png"); /* Background image for the first choice */
-  }
-  .content#page2 .choice.with-checkbox#problem2 {
-    background-image: url("imgs/pg-2-thin-arms.png"); /* Background image for the first choice */
-  }
-  .content#page2 .choice.with-checkbox#problem3 {
-    background-image: url("imgs/pg-2-loose-neck.png"); /* Background image for the first choice */
-  }
-  .content#page2 .choice.with-checkbox#problem4 {
-    background-image: url("imgs/pg-2-saggy-belly.png"); /* Background image for the first choice */
-  }
-  
-  
-  /* Hide the default checkbox */
-  .content#page2 .choice input[type="checkbox"] {
-    display: none;
-  }
-  
-  /* Style the custom checkbox */
-  .content#page2 .choice-checkbox {
-    position: absolute;
-    opacity: 0;
-  }
-  
-  /* Style the custom checkbox label */
-  .content#page2 .choice-checkbox + label {
-    position: relative;
-    padding-left: 35px; /* Adjust as needed */
-    cursor: pointer;
-  }
-  
-  /* Style the custom checkbox indicator */
-  .content#page2 .choice-checkbox + label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border: 2px solid #fff;
-    background-color: #556479;
-    transition: background-color 0.3s;
-  }
-  
-  /* Style the checkmark when checkbox is checked */
-  .content#page2 .choice-checkbox:checked + label::after {
-    content: "✓"; /* Add a checkmark character */
-    position: absolute;
-    top: 50%;
-    left: 5px; /* Adjust the left position to place the checkmark inside the box */
-    transform: translateY(-50%);
-    font-size: 24px; /* Adjust the checkmark size */
-    color: #E2C47C; /* Color of the checkmark */
-  }
-  
-  /* Highlight the selected choice on Page 2 */
-  .content#page2 .choice.selected {
-    border: 2px solid #E2C47C; /* Add a solid border for selected choice */
-    background-color: #556479; /* Keep the background color for selected choice */
-    color: #fff; /* Change the text color for selected choice */
-  }
-  
-  /* Apply styles for Page 3 similar to Page 2 but without a background */
-  .content#page3 .choice.with-checkbox {
-    background-color: #556479;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    height: 105px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0 16px;
-    max-width: 100%;
-    flex-direction: column; /* Arrange content in a column */
-  }
-  
-  /* Hide the default checkbox on Page 3 */
-  .content#page3 .choice input[type="checkbox"] {
-    display: none;
-  }
-  
-  /* Style the custom checkbox on Page 3 */
-  .content#page3 .choice-checkbox {
-    position: absolute;
-    opacity: 0;
-  }
-  
-  /* Style the custom checkbox label on Page 3 */
-  .content#page3 .choice-checkbox + label {
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    text-align: left;
-  }
-  
-  /* Style the custom checkbox indicator on Page 3 */
-  .content#page3 .choice-checkbox + label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border: 2px solid #fff;
-    transition: background-color 0.3s;
-  }
-  
-  /* Style the checkmark when checkbox is checked on Page 3 */
-  .content#page3 .choice-checkbox:checked + label::after {
-    content: "✓";
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #E2C47C;
-  }
-  
-  /* Highlight the selected choice on Page 3 */
-  .content#page3 .choice.selected {
-    border: 2px solid #E2C47C;
-    color: #fff;
-  }
-  
-  /* Style the choice content */
-  .content#page3 span {
-    font-size: 18px;
-    color: #fff;
-  }
-  
-  /* Style the choice description */
-  .content#page3 .description {
-    font-size: 14px;
-    color: #ccc;
-    text-align: left;
-    margin-left: 35px;
-    margin-top: 10px;
-    font-weight: 400;
-  }
 
+/* Selected choice styling */
+.choice.selected {
+  border: 2px solid #E2C47C;
+  background-color: #556479;
+  color: #E2C47C;
+  cursor: not-allowed;
+}
 
-  /* Apply styles for Page 3 similar to Page 2 but without a background */
-  .content#page4 .choice.with-checkbox {
-    background-color: #556479;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    height: 105px;
-    margin: 8px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0 16px;
-    max-width: 100%;
-    flex-direction: column; /* Arrange content in a column */
+/* Logo image styling */
+.img-logo {
+  margin-bottom: 40px;
+}
+
+/* Custom radio button styling */
+.custom-radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Hide default radio input */
+.choice-input {
+  display: none;
+}
+
+/* Custom radio box styling */
+.custom-radio-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #556479;
+  margin-right: 10px;
+  border-radius: 3px;
+  background-color: transparent;
+  position: relative;
+}
+
+/* Styling for the radio button indicator */
+.custom-radio-box::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #556479;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+/* Styling for the radio button indicator when checked */
+.choice-input:checked + .custom-radio-box::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Styling for choices on Page 2 with checkboxes */
+.content#page2 .choice.with-checkbox {
+  background-color: #556479;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  height: 140px; /* Same height as Page 1 */
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right center;
+}
+
+/* Background images for choices on Page 2 */
+.content#page2 .choice.with-checkbox#problem1 {
+  background-image: url("imgs/pg-2-thighs.png");
+}
+
+.content#page2 .choice.with-checkbox#problem2 {
+  background-image: url("imgs/pg-2-thin-arms.png");
+}
+
+.content#page2 .choice.with-checkbox#problem3 {
+  background-image: url("imgs/pg-2-loose-neck.png");
+}
+
+.content#page2 .choice.with-checkbox#problem4 {
+  background-image: url("imgs/pg-2-saggy-belly.png");
+}
+
+/* Hide default checkbox on Page 2 */
+.content#page2 .choice input[type="checkbox"] {
+  display: none;
+}
+
+/* Styling for the custom checkbox */
+.content#page2 .choice-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Styling for the custom checkbox label */
+.content#page2 .choice-checkbox + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+/* Styling for the custom checkbox indicator */
+.content#page2 .choice-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  background-color: #556479;
+  transition: background-color 0.3s;
+}
+
+/* Styling for the checkmark when checkbox is checked */
+.content#page2 .choice-checkbox:checked + label::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #E2C47C;
+}
+
+/* Highlight the selected choice on Page 2 */
+.content#page2 .choice.selected {
+  border: 2px solid #E2C47C;
+  background-color: #556479;
+  color: #fff;
+}
+
+/* Styling for Page 3 similar to Page 2 but without a background */
+.content#page3 .choice.with-checkbox {
+  background-color: #556479;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  height: 105px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 16px;
+  max-width: 100%;
+  flex-direction: column; /* Arrange content in a column */
+}
+
+/* Hide default checkbox on Page 3 */
+.content#page3 .choice input[type="checkbox"] {
+  display: none;
+}
+
+/* Styling for the custom checkbox on Page 3 */
+.content#page3 .choice-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Styling for the custom checkbox label on Page 3 */
+.content#page3 .choice-checkbox + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Styling for the custom checkbox indicator on Page 3 */
+.content#page3 .choice-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+}
+
+/* Styling for the checkmark when checkbox is checked on Page 3 */
+.content#page3 .choice-checkbox:checked + label::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #E2C47C;
+}
+
+/* Highlight the selected choice on Page 3 */
+.content#page3 .choice.selected {
+  border: 2px solid #E2C47C;
+  color: #fff;
+}
+
+/* Styling for choice content on Page 3 */
+.content#page3 span {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Styling for choice description on Page 3 */
+.content#page3 .description {
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+  margin-left: 35px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Styling for Page 7 similar to Page 3 but with radio buttons */
+.content#page7 .choice.with-radio {
+  background-color: #556479;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  height: 105px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 16px;
+  max-width: 100%;
+  flex-direction: column; /* Arrange content in a column */
+}
+
+/* Hide default radio input on Page 7 */
+.content#page7 .choice input[type="radio"] {
+  display: none;
+}
+
+/* Styling for the custom radio input on Page 7 */
+.content#page7 .choice-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Styling for the custom radio label on Page 7 */
+.content#page7 .choice-radio + label {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Styling for the custom radio indicator on Page 7 */
+.content#page7 .choice-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+  border-radius: 100%;
+}
+
+/* Styling for the checkmark when radio is checked on Page 7 */
+.content#page7 .choice-radio:checked + label::after {
+  content: "⬤";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #E2C47C;
+}
+
+/* Highlight the selected choice on Page 7 */
+.content#page7 .choice.selected {
+  border: 2px solid #E2C47C;
+  color: #fff;
+}
+
+/* Styling for choice content on Page 7 */
+.content#page7 span {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Styling for choice description on Page 7 */
+.content#page7 .description {
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+  margin-left: 35px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Styling for Page 8 similar to Page 2 with checkboxes */
+.content#page8 .choice.with-checkbox {
+  background-color: #556479;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  height: 105px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 16px;
+  max-width: 100%;
+  flex-direction: column; /* Arrange content in a column */
+}
+
+/* Hide default checkbox on Page 8 */
+.content#page8 .choice input[type="checkbox"] {
+  display: none;
+}
+
+/* Styling for the custom checkbox on Page 8 */
+.content#page8 .choice-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Styling for the custom checkbox label on Page 8 */
+.content#page8 .choice-checkbox + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Styling for the custom checkbox indicator on Page 8 */
+.content#page8 .choice-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+}
+
+/* Styling for the checkmark when checkbox is checked on Page 8 */
+.content#page8 .choice-checkbox:checked + label::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #E2C47C;
+}
+
+/* Highlight the selected choice on Page 8 */
+.content#page8 .choice.selected {
+  border: 2px solid #E2C47C;
+  color: #fff;
+}
+
+/* Styling for choice content on Page 8 */
+.content#page8 span {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Styling for choice description on Page 8 */
+.content#page8 .description {
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+  margin-left: 35px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Styling for result description */
+.result-description {
+  font-size: 14px !important;
+  color: #ccc;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Styling for content with image */
+.content-with-img {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* Styling for content-level */
+.content-level {
+  background-color: #556579;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 16px;
+  width: 485px;
+  max-width: 100%;
+  margin: 8px 0;
+  border: 1px solid #E2C47C;
+}
+
+/* Styling for content-level label */
+.content-level label {
+  font-size: 16px;
+  color: #fff;
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Styling for content-level progress bar */
+.content-level .progress-bar {
+  flex: 5;
+  height: 12px;
+  background-color: #556479;
+}
+
+/* Styling for content-level progress indicator */
+.content-level .progress-indicator {
+  font-size: 16px;
+  color: #fff;
+  flex: 1;
+  text-align: right;
+}
+
+/* Styling for page progress */
+.page-progress {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Styling for results page */
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* Styling for results title */
+.results-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Styling for result cards container */
+.result-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for result card */
+.result-card {
+  width: calc(33.33% - 20px);
+  background-color: #556479;
+  margin-bottom: 20px;
+  border: 1px solid #E2C47C;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Styling for result card title */
+.result-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Styling for result card description */
+.result-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Styling for result card image */
+.result-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Styling for result card button */
+.result-card button {
+  background-color: #E2C47C;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  height: 50px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 100%;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* Styling for result card button on hover */
+.result-card button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Styling for result card button link */
+.result-card button a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 768px) { /* tablet view*/
+  .content {
+    flex-direction: column;
+    margin: auto;
+    width: 80% !important;
+  }
+  .question, .choice, .continue-button, .progress-container{
+    width: 100%;
+  }
+  .content-with-img{
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-level {
+    padding-left: 20px !important;
+    width: 94%;
+  }
+  .content#page1 div{
+    padding-left: 0px !important;
   }
   
-  /* Hide the default checkbox on Page 3 */
-  .content#page4 .choice input[type="checkbox"] {
-    display: none;
-  }
-  
-  /* Style the custom checkbox on Page 3 */
-  .content#page4 .choice-checkbox {
-    position: absolute;
-    opacity: 0;
-  }
-  
-  /* Style the custom checkbox label on Page 3 */
-  .content#page4 .choice-checkbox + label {
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    text-align: left;
-  }
-  
-  /* Style the custom checkbox indicator on Page 3 */
-  .content#page4 .choice-checkbox + label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border: 2px solid #fff;
-    transition: background-color 0.3s;
-  }
-  
-  /* Style the checkmark when checkbox is checked on Page 3 */
-  .content#page4 .choice-checkbox:checked + label::after {
-    content: "✓";
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #E2C47C;
-  }
-  
-  /* Highlight the selected choice on Page 3 */
-  .content#page4 .choice.selected {
-    border: 2px solid #E2C47C;
-    color: #fff;
-  }
-  
-  /* Style the choice content */
-  .content#page4 span {
-    font-size: 18px;
-    color: #fff;
-  }
-  
-  /* Style the choice description */
-  .content#page4 .description {
-    font-size: 14px;
-    color: #ccc;
-    text-align: left;
-    margin-left: 35px;
-    margin-top: 10px;
-    font-weight: 400;
-  }
-  /* Style the result description */
-  .result-description {
-    font-size: 14px !important;
-    color: #ccc;
-    text-align: left;
-    margin-top: 10px;
-    font-weight: 400;
-  }
-  @media (max-width: 475px) {
-    body {
-        padding: 10px; /* Reduce padding for smaller screens */
-      }
-    
-      /* Adjust the content width and margins */
-      .content {
-        max-width: 335px; /* Set the maximum width for content */
-        margin: 20px; /* Add 20px margins on each side */
-        overflow: hidden;
-      }
-    
-  
-    .header {
-      width: 85%; /* Make the header full width */
+}
+
+@media (max-width: 475px) {
+  body {
+      padding: 10px; /* Reduce padding for smaller screens */
     }
   
-    .continue-button,
-    .skip-button,
-    .unsure-button {
-      width: 100%; /* Make buttons full width */
-      padding: 10px; /* Adjust padding for buttons */
-      font-size: 16px; /* Adjust font size for buttons */
-      height: 50px; /* Adjust height for buttons */
+    /* Adjust the content width and margins */
+    .content {
+      max-width: 335px; /* Set the maximum width for content */
+      margin: 20px; /* Add 20px margins on each side */
+      overflow: hidden;
+    }
+  .choice{
+    padding-right: 135px;
+  }
+
+  .header {
+    width: 85%; /* Make the header full width */
+  }
+
+  .continue-button,
+  .skip-button,
+  .unsure-button {
+    width: 100%; /* Make buttons full width */
+    padding: 10px; /* Adjust padding for buttons */
+    font-size: 16px; /* Adjust font size for buttons */
+    height: 50px; /* Adjust height for buttons */
+    margin-bottom: 10px; /* Add some margin between buttons */
+    max-width: 350px;
+  }
+  .result{
+      width: 90%; /* Make buttons full width */
+    padding: 10px; /* Adjust padding for buttons */
+    font-size: 16px;
+      height: auto;
       margin-bottom: 10px; /* Add some margin between buttons */
-      max-width: 313px;
-    }
-    .result{
-        width: 90%; /* Make buttons full width */
-      padding: 10px; /* Adjust padding for buttons */
-      font-size: 16px;
-        height: auto;
-        margin-bottom: 10px; /* Add some margin between buttons */
-    }
-    .question {
-      font-size: 20px; /* Adjust font size for questions */
-    }
-  
-    .choice {
-      font-size: 16px; /* Adjust font size for choices */
-    }
-  
-    .progress-container {
-      width: 100%; /* Make progress container full width */
-    }
-  
-    /* Add any other mobile-specific styles here */
-  
-    /* Example: Hide background images for choices on mobile */
-    .choice.with-checkbox {
-      background-image: none;
-    }
+      text-align: left;
   }
+  .question {
+    font-size: 20px; /* Adjust font size for questions */
+    width: 100%;
+  }
+
+  .choice {
+    font-size: 16px; /* Adjust font size for choices */
+  }
+
+  .progress-container {
+    width: 100%; /* Make progress container full width */
+  }
+
+  /* Add any other mobile-specific styles here */
+
+  /* Example: Hide background images for choices on mobile */
+  .choice.with-checkbox {
+    background-image: none;
+  }
+
+  .content#page4{
+    max-width: 335px;
+  }
+  .content-with-img{
+    flex-direction: column;
+    align-items: center;
+  }
+  .right{
+    width: 100%
+  }
+  #sliderContainer{
+    width: 80% !important;
+    margin: auto;
+  }
+  .skin_type{
+    width: 300px;
+  }
+  .question#mob{
+    display: block !important;
+  }
+  .question#desk{
+    display: none;
+  }
+  #mobile_img{
+    display: block !important;
+  }
+  #desktop_img{
+    display: none !important;
+  }
+}
+@media (max-width: 320px) {
+  .content {
+    max-width: 290px !important;
+  }
+}
